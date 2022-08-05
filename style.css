@@ -1,0 +1,109 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+li{
+    list-style: none;
+}
+body{
+    background: #777777;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container{
+    padding: 10px;
+    width: 60%;
+    background-color: whitesmoke;
+    height: 60vh;
+    display: flex;
+    margin: 30px auto;
+
+}
+
+.container_actions{
+    width: 100%;
+    align-self: flex-end;
+    position: relative;
+}
+
+.container_actions_list{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    border-top: solid 1px #ccc;
+}
+.container_actions_items{
+    padding: 10px 20px;
+}
+i{
+    margin-right: 7px;
+}
+.container_actions_items:hover{
+  background-color: #ccc;
+}
+.container_reaction_list{
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    width: 30vw;
+    background-color: pink;
+    padding: 15px;
+    visibility: hidden;
+    top: -60px;
+}
+
+.container_reaction_item{
+    animation: move 3s ease-in backwards;
+    position: relative;
+}
+.container_reaction_item:hover{
+   transform: scale(1.5);
+
+}
+.container_reaction_tooltip{
+    position: absolute;
+    background-color: black;
+    color: #fff;
+    top: -30px;
+    font-size: 0.7rem;
+    transform: translateX(-30%);
+    padding: 3px;
+    border-radius: 340px;
+    display: none;
+}
+.container_reaction_item:hover .container_reaction_tooltip{
+    display: block;
+}
+/* Icon Hover */
+.Like_icon{
+    color: blue;
+}
+.Celebrate_icon{
+    color: green;
+}
+.Support_icon{
+    color: plum;
+}
+.Funny_icon{
+    color: aqua;
+}
+.Love_icon{
+    color: red;
+}
+.Insightful_icon{
+    color: yellow;
+}
+.Curious_icon{
+   color:purple
+}
+@keyframes move {
+    50%{
+        transform: translateY(-10px);
+    }
+}
